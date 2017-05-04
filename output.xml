@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170502 09:04:51.569" generator="Robot 3.0.2 (Python 2.7.6 on linux2)">
+<robot generated="20170503 11:10:01.019" generator="Robot 3.0.2 (Python 2.7.6 on linux2)">
 <suite source="/home/rfsilva/PycharmProjects/e-commerce-local" id="s1" name="E-Commerce-Local">
 <suite source="/home/rfsilva/PycharmProjects/e-commerce-local/01__fakedata.robot" id="s1-s1" name="Fakedata">
 <test id="s1-s1-t1" name="Get Fake Data">
@@ -11,27 +11,254 @@
 <arg>chrome</arg>
 <arg>http://192.168.3.113:4444/wd/hub</arg>
 </arguments>
-<msg timestamp="20170502 09:04:51.628" level="INFO">Opening browser 'gc' to base url 'http://www.fakenamegenerator.com/gen-male-br-br.php' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
-<msg timestamp="20170502 09:04:51.628" level="INFO">Could not get IP address for host: 192.168.3.113</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170502 09:04:51.630" level="FAIL">No browser is open</msg>
-<status status="FAIL" endtime="20170502 09:04:51.630" starttime="20170502 09:04:51.629"></status>
+<msg timestamp="20170503 11:10:01.079" level="INFO">Opening browser 'gc' to base url 'http://www.fakenamegenerator.com/gen-male-br-br.php' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
+<status status="PASS" endtime="20170503 11:10:13.296" starttime="20170503 11:10:01.079"></status>
 </kw>
-<msg timestamp="20170502 09:04:51.630" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.631" level="FAIL">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</msg>
-<status status="FAIL" endtime="20170502 09:04:51.631" starttime="20170502 09:04:51.627"></status>
+<kw name="Get Fake Data">
+<arguments>
+<arg>${name_locator}</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${element}</var>
+</assign>
+<msg timestamp="20170503 11:10:13.335" level="INFO">${element} = Luís Pinto Cavalcanti</msg>
+<status status="PASS" endtime="20170503 11:10:13.335" starttime="20170503 11:10:13.296"></status>
+</kw>
+<kw name="Remove String" library="String">
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>This is a real email address. Click here to activate it!</arg>
+</arguments>
+<assign>
+<var>${filtered_element}</var>
+</assign>
+<msg timestamp="20170503 11:10:13.335" level="INFO">${filtered_element} = Luís Pinto Cavalcanti</msg>
+<status status="PASS" endtime="20170503 11:10:13.335" starttime="20170503 11:10:13.335"></status>
+</kw>
+<msg timestamp="20170503 11:10:13.335" level="INFO">${name} = Luís Pinto Cavalcanti</msg>
+<status status="PASS" endtime="20170503 11:10:13.335" starttime="20170503 11:10:13.296"></status>
+</kw>
+<kw name="Get Fake Data">
+<arguments>
+<arg>${email_locator}</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${element}</var>
+</assign>
+<msg timestamp="20170503 11:10:13.387" level="INFO">${element} = LuisPintoCavalcanti@rhyta.com
+This is a real email address. Click here to activate it!</msg>
+<status status="PASS" endtime="20170503 11:10:13.387" starttime="20170503 11:10:13.336"></status>
+</kw>
+<kw name="Remove String" library="String">
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>This is a real email address. Click here to activate it!</arg>
+</arguments>
+<assign>
+<var>${filtered_element}</var>
+</assign>
+<msg timestamp="20170503 11:10:13.387" level="INFO">${filtered_element} = LuisPintoCavalcanti@rhyta.com
+</msg>
+<status status="PASS" endtime="20170503 11:10:13.387" starttime="20170503 11:10:13.387"></status>
+</kw>
+<msg timestamp="20170503 11:10:13.387" level="INFO">${email} = LuisPintoCavalcanti@rhyta.com
+</msg>
+<status status="PASS" endtime="20170503 11:10:13.387" starttime="20170503 11:10:13.336"></status>
+</kw>
+<kw name="Get Fake Data">
+<arguments>
+<arg>${cpf_locator}</arg>
+</arguments>
+<assign>
+<var>${cpf}</var>
+</assign>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${element}</var>
+</assign>
+<msg timestamp="20170503 11:10:13.428" level="INFO">${element} = 581.261.561-63</msg>
+<status status="PASS" endtime="20170503 11:10:13.428" starttime="20170503 11:10:13.388"></status>
+</kw>
+<kw name="Remove String" library="String">
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>This is a real email address. Click here to activate it!</arg>
+</arguments>
+<assign>
+<var>${filtered_element}</var>
+</assign>
+<msg timestamp="20170503 11:10:13.428" level="INFO">${filtered_element} = 581.261.561-63</msg>
+<status status="PASS" endtime="20170503 11:10:13.428" starttime="20170503 11:10:13.428"></status>
+</kw>
+<msg timestamp="20170503 11:10:13.429" level="INFO">${cpf} = 581.261.561-63</msg>
+<status status="PASS" endtime="20170503 11:10:13.429" starttime="20170503 11:10:13.387"></status>
+</kw>
+<kw name="Get Fake Data">
+<arguments>
+<arg>${cep_locator}</arg>
+</arguments>
+<assign>
+<var>${cep}</var>
+</assign>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${element}</var>
+</assign>
+<msg timestamp="20170503 11:10:13.472" level="INFO">${element} = Travessa Canaã, 1810
+Cruz Alta-RS
+98050-350</msg>
+<status status="PASS" endtime="20170503 11:10:13.472" starttime="20170503 11:10:13.429"></status>
+</kw>
+<kw name="Remove String" library="String">
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>This is a real email address. Click here to activate it!</arg>
+</arguments>
+<assign>
+<var>${filtered_element}</var>
+</assign>
+<msg timestamp="20170503 11:10:13.473" level="INFO">${filtered_element} = Travessa Canaã, 1810
+Cruz Alta-RS
+98050-350</msg>
+<status status="PASS" endtime="20170503 11:10:13.473" starttime="20170503 11:10:13.472"></status>
+</kw>
+<msg timestamp="20170503 11:10:13.473" level="INFO">${cep} = Travessa Canaã, 1810
+Cruz Alta-RS
+98050-350</msg>
+<status status="PASS" endtime="20170503 11:10:13.473" starttime="20170503 11:10:13.429"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${cep}</arg>
+<arg>-9</arg>
+</arguments>
+<assign>
+<var>${cep}</var>
+</assign>
+<msg timestamp="20170503 11:10:13.473" level="INFO">${cep} = 98050-350</msg>
+<status status="PASS" endtime="20170503 11:10:13.473" starttime="20170503 11:10:13.473"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:13.473" level="INFO">Luís Pinto Cavalcanti</msg>
+<status status="PASS" endtime="20170503 11:10:13.473" starttime="20170503 11:10:13.473"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:13.474" level="INFO">LuisPintoCavalcanti@rhyta.com
+</msg>
+<status status="PASS" endtime="20170503 11:10:13.474" starttime="20170503 11:10:13.473"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${tel}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:13.474" level="INFO">63983397034</msg>
+<status status="PASS" endtime="20170503 11:10:13.474" starttime="20170503 11:10:13.474"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${cep}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:13.474" level="INFO">98050-350</msg>
+<status status="PASS" endtime="20170503 11:10:13.474" starttime="20170503 11:10:13.474"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:13.475" level="INFO">${name} = Luís Pinto Cavalcanti</msg>
+<status status="PASS" endtime="20170503 11:10:13.475" starttime="20170503 11:10:13.475"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:13.476" level="INFO">${email} = LuisPintoCavalcanti@rhyta.com
+</msg>
+<status status="PASS" endtime="20170503 11:10:13.476" starttime="20170503 11:10:13.475"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${tel}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:13.476" level="INFO">${tel} = 63983397034</msg>
+<status status="PASS" endtime="20170503 11:10:13.476" starttime="20170503 11:10:13.476"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${cpf}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:13.476" level="INFO">${cpf} = 581.261.561-63</msg>
+<status status="PASS" endtime="20170503 11:10:13.476" starttime="20170503 11:10:13.476"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:13.477" level="INFO">${password} = P4$$w0rd</msg>
+<status status="PASS" endtime="20170503 11:10:13.477" starttime="20170503 11:10:13.477"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${cep}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:13.477" level="INFO">${cep} = 98050-350</msg>
+<status status="PASS" endtime="20170503 11:10:13.477" starttime="20170503 11:10:13.477"></status>
 </kw>
 <kw type="teardown" name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170502 09:04:51.631" starttime="20170502 09:04:51.631"></status>
+<status status="PASS" endtime="20170503 11:10:13.545" starttime="20170503 11:10:13.477"></status>
 </kw>
 <tags>
 <tag>get_fake_data</tag>
 </tags>
-<status status="FAIL" endtime="20170502 09:04:51.631" critical="yes" starttime="20170502 09:04:51.627">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
+<status status="PASS" endtime="20170503 11:10:13.545" critical="yes" starttime="20170503 11:10:01.079"></status>
 </test>
-<status status="FAIL" endtime="20170502 09:04:51.631" starttime="20170502 09:04:51.581"></status>
+<status status="PASS" endtime="20170503 11:10:13.546" starttime="20170503 11:10:01.032"></status>
 </suite>
 <suite source="/home/rfsilva/PycharmProjects/e-commerce-local/02__create_account.robot" id="s1-s2" name="Create Account">
 <test id="s1-s2-t1" name="Create Valid Account">
@@ -44,28 +271,174 @@
 <arg>None</arg>
 <arg>http://192.168.3.113:4444/wd/hub</arg>
 </arguments>
-<msg timestamp="20170502 09:04:51.637" level="INFO">Opening browser 'gc' to base url 'https://cliente.americanas.com.br/s/cadastro/pf/' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
-<msg timestamp="20170502 09:04:51.638" level="INFO">Could not get IP address for host: 192.168.3.113</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170502 09:04:51.639" level="FAIL">No browser is open</msg>
-<status status="FAIL" endtime="20170502 09:04:51.639" starttime="20170502 09:04:51.638"></status>
+<msg timestamp="20170503 11:10:13.552" level="INFO">Opening browser 'gc' to base url 'https://cliente.americanas.com.br/s/cadastro/pf/' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
+<status status="PASS" endtime="20170503 11:10:19.184" starttime="20170503 11:10:13.552"></status>
 </kw>
-<msg timestamp="20170502 09:04:51.639" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.640" level="FAIL">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</msg>
-<status status="FAIL" endtime="20170502 09:04:51.640" starttime="20170502 09:04:51.637"></status>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170503 11:10:19.313" starttime="20170503 11:10:19.184"></status>
 </kw>
-<status status="FAIL" endtime="20170502 09:04:51.640" starttime="20170502 09:04:51.637"></status>
+<status status="PASS" endtime="20170503 11:10:19.313" starttime="20170503 11:10:13.551"></status>
+</kw>
+<kw name="Fill Form" library="keywords">
+<arguments>
+<arg>${name}</arg>
+<arg>${email}</arg>
+<arg>${tel}</arg>
+<arg>${cpf}</arg>
+<arg>${password}</arg>
+<arg>${password}</arg>
+<arg>${cep}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${email_locator}</arg>
+<arg>${anemail}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:19.314" level="INFO">Typing text 'LuisPintoCavalcanti@rhyta.com
+' into text field '//*[@id="app-container"]/div/div[2]/form/div[2]/div/div/div/span/input'</msg>
+<status status="PASS" endtime="20170503 11:10:19.660" starttime="20170503 11:10:19.314"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${pass_locator}</arg>
+<arg>${apass}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:19.661" level="INFO">Typing text 'P4$$w0rd' into text field '//*[@id="app-container"]/div/div[2]/form/div[3]/div[1]/div/div/div/span/input'</msg>
+<status status="PASS" endtime="20170503 11:10:19.841" starttime="20170503 11:10:19.660"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${confirm_pass_locator}</arg>
+<arg>${aconfirmpass}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:19.841" level="INFO">Typing text 'P4$$w0rd' into text field '//*[@id="app-container"]/div/div[2]/form/div[3]/div[2]/div/div/div/span/input'</msg>
+<status status="PASS" endtime="20170503 11:10:19.981" starttime="20170503 11:10:19.841"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${name_locator}</arg>
+<arg>${aname}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:19.982" level="INFO">Typing text 'Luís Pinto Cavalcanti' into text field '//*[@id="app-container"]/div/div[2]/form/div[4]/div[1]/div/div/div/input'</msg>
+<status status="PASS" endtime="20170503 11:10:20.174" starttime="20170503 11:10:19.981"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="app-container"]/div/div[2]/form/div[4]/div[2]/div/div[1]</arg>
+</arguments>
+<msg timestamp="20170503 11:10:20.174" level="INFO">Clicking element '//*[@id="app-container"]/div/div[2]/form/div[4]/div[2]/div/div[1]'.</msg>
+<status status="PASS" endtime="20170503 11:10:20.257" starttime="20170503 11:10:20.174"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${cpf_locator}</arg>
+<arg>${acpf}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:20.258" level="INFO">Typing text '581.261.561-63' into text field '//*[@id="app-container"]/div/div[2]/form/div[4]/div[3]/div/div/div/span/input'</msg>
+<status status="PASS" endtime="20170503 11:10:20.410" starttime="20170503 11:10:20.257"></status>
+</kw>
+<kw name="Click Element At Coordinates" library="Selenium2Library">
+<doc>Click element identified by `locator` at x/y coordinates of the element.</doc>
+<arguments>
+<arg>${birth_locator}</arg>
+<arg>-75</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20170503 11:10:20.411" level="INFO">Click clicking element '//*[@id="app-container"]/div/div[2]/form/div[4]/div[4]/div/div/div/span/input' in coordinates '-75', '0'.</msg>
+<status status="PASS" endtime="20170503 11:10:20.474" starttime="20170503 11:10:20.411"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${birth_locator}</arg>
+<arg>08081980</arg>
+</arguments>
+<status status="PASS" endtime="20170503 11:10:20.523" starttime="20170503 11:10:20.474"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${tel_locator}</arg>
+<arg>${atel}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:20.523" level="INFO">Typing text '63983397034' into text field '//*[@id="app-container"]/div/div[2]/form/div[5]/div[1]/div/div/div/span/input'</msg>
+<status status="PASS" endtime="20170503 11:10:20.684" starttime="20170503 11:10:20.523"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${cep_locator}</arg>
+<arg>${acep}</arg>
+</arguments>
+<msg timestamp="20170503 11:10:20.684" level="INFO">Typing text '98050-350' into text field '//*[@id="app-container"]/div/div[2]/form/div[8]/div[2]/div/div/div/span/input'</msg>
+<status status="PASS" endtime="20170503 11:10:20.805" starttime="20170503 11:10:20.684"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${number_locator}</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20170503 11:10:21.896" starttime="20170503 11:10:20.806"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${number_locator}</arg>
+<arg>102</arg>
+</arguments>
+<msg timestamp="20170503 11:10:21.897" level="INFO">Typing text '102' into text field '//*[@id="app-container"]/div/div[2]/form/div[8]/div[3]/div[2]/div/div/div/input'</msg>
+<status status="PASS" endtime="20170503 11:10:21.989" starttime="20170503 11:10:21.896"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${ref_locator}</arg>
+<arg>AM</arg>
+</arguments>
+<msg timestamp="20170503 11:10:21.989" level="INFO">Typing text 'AM' into text field '//*[@id="app-container"]/div/div[2]/form/div[8]/div[3]/div[4]/div/div/div/span/input'</msg>
+<status status="PASS" endtime="20170503 11:10:22.082" starttime="20170503 11:10:21.989"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="app-container"]/div/div[2]/form/div[9]/div[2]/button</arg>
+</arguments>
+<msg timestamp="20170503 11:10:22.082" level="INFO">Clicking button '//*[@id="app-container"]/div/div[2]/form/div[9]/div[2]/button'.</msg>
+<status status="PASS" endtime="20170503 11:10:22.180" starttime="20170503 11:10:22.082"></status>
+</kw>
+<status status="PASS" endtime="20170503 11:10:22.180" starttime="20170503 11:10:19.313"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Não é você? Sair</arg>
+</arguments>
+<status status="PASS" endtime="20170503 11:10:32.066" starttime="20170503 11:10:22.180"></status>
+</kw>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains `expected`.</doc>
+<arguments>
+<arg>minhaconta.americanas</arg>
+</arguments>
+<msg timestamp="20170503 11:10:32.071" level="INFO">Current location contains 'minhaconta.americanas'.</msg>
+<status status="PASS" endtime="20170503 11:10:32.071" starttime="20170503 11:10:32.066"></status>
 </kw>
 <kw type="teardown" name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170502 09:04:51.640" starttime="20170502 09:04:51.640"></status>
+<status status="PASS" endtime="20170503 11:10:32.142" starttime="20170503 11:10:32.071"></status>
 </kw>
 <tags>
 <tag>valid_ac</tag>
 </tags>
-<status status="FAIL" endtime="20170502 09:04:51.640" critical="yes" starttime="20170502 09:04:51.637">Setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
+<status status="PASS" endtime="20170503 11:10:32.142" critical="yes" starttime="20170503 11:10:13.551"></status>
 </test>
 <test id="s1-s2-t2" name="Dont Create Account Missing Fields">
 <kw type="setup" name="Open Browser To Page" library="keywords">
@@ -77,446 +450,134 @@ URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
 <arg>None</arg>
 <arg>http://192.168.3.113:4444/wd/hub</arg>
 </arguments>
-<msg timestamp="20170502 09:04:51.641" level="INFO">Opening browser 'gc' to base url 'https://cliente.americanas.com.br/s/cadastro/pf/' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
-<msg timestamp="20170502 09:04:51.641" level="INFO">Could not get IP address for host: 192.168.3.113</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170502 09:04:51.642" level="FAIL">No browser is open</msg>
-<status status="FAIL" endtime="20170502 09:04:51.642" starttime="20170502 09:04:51.642"></status>
+<msg timestamp="20170503 11:10:32.143" level="INFO">Opening browser 'gc' to base url 'https://cliente.americanas.com.br/s/cadastro/pf/' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
+<status status="PASS" endtime="20170503 11:10:37.495" starttime="20170503 11:10:32.143"></status>
 </kw>
-<msg timestamp="20170502 09:04:51.643" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.643" level="FAIL">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</msg>
-<status status="FAIL" endtime="20170502 09:04:51.643" starttime="20170502 09:04:51.641"></status>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170503 11:10:37.628" starttime="20170503 11:10:37.495"></status>
 </kw>
-<status status="FAIL" endtime="20170502 09:04:51.643" starttime="20170502 09:04:51.641"></status>
+<status status="PASS" endtime="20170503 11:10:37.628" starttime="20170503 11:10:32.143"></status>
 </kw>
-<kw type="teardown" name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170502 09:04:51.643" starttime="20170502 09:04:51.643"></status>
-</kw>
-<tags>
-<tag>missing-fields</tag>
-</tags>
-<status status="FAIL" endtime="20170502 09:04:51.643" critical="yes" starttime="20170502 09:04:51.640">Setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</test>
-<test id="s1-s2-t3" name="Dont Create Account Different Pass">
-<kw type="setup" name="Open Browser To Page" library="keywords">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
+<kw name="Fill Form" library="keywords">
 <arguments>
-<arg>https://cliente.americanas.com.br/s/cadastro/pf/</arg>
-<arg>gc</arg>
-<arg>None</arg>
-<arg>http://192.168.3.113:4444/wd/hub</arg>
+<arg>${name}</arg>
+<arg>${email}</arg>
+<arg>${EMPTY}</arg>
+<arg>${cpf}</arg>
+<arg>${password}</arg>
+<arg>${password}</arg>
+<arg>${cep}</arg>
 </arguments>
-<msg timestamp="20170502 09:04:51.644" level="INFO">Opening browser 'gc' to base url 'https://cliente.americanas.com.br/s/cadastro/pf/' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
-<msg timestamp="20170502 09:04:51.644" level="INFO">Could not get IP address for host: 192.168.3.113</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170502 09:04:51.646" level="FAIL">No browser is open</msg>
-<status status="FAIL" endtime="20170502 09:04:51.646" starttime="20170502 09:04:51.645"></status>
-</kw>
-<msg timestamp="20170502 09:04:51.646" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.646" level="FAIL">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</msg>
-<status status="FAIL" endtime="20170502 09:04:51.646" starttime="20170502 09:04:51.644"></status>
-</kw>
-<status status="FAIL" endtime="20170502 09:04:51.646" starttime="20170502 09:04:51.644"></status>
-</kw>
-<kw type="teardown" name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170502 09:04:51.646" starttime="20170502 09:04:51.646"></status>
-</kw>
-<tags>
-<tag>diff-pass</tag>
-</tags>
-<status status="FAIL" endtime="20170502 09:04:51.646" critical="yes" starttime="20170502 09:04:51.644">Setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</test>
-<test id="s1-s2-t4" name="Dont Create Account Invalid Tel">
-<kw type="setup" name="Open Browser To Page" library="keywords">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
-<arg>https://cliente.americanas.com.br/s/cadastro/pf/</arg>
-<arg>gc</arg>
-<arg>None</arg>
-<arg>http://192.168.3.113:4444/wd/hub</arg>
+<arg>${email_locator}</arg>
+<arg>${anemail}</arg>
 </arguments>
-<msg timestamp="20170502 09:04:51.647" level="INFO">Opening browser 'gc' to base url 'https://cliente.americanas.com.br/s/cadastro/pf/' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
-<msg timestamp="20170502 09:04:51.648" level="INFO">Could not get IP address for host: 192.168.3.113</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170502 09:04:51.649" level="FAIL">No browser is open</msg>
-<status status="FAIL" endtime="20170502 09:04:51.649" starttime="20170502 09:04:51.648"></status>
+<msg timestamp="20170503 11:10:37.629" level="INFO">Typing text 'LuisPintoCavalcanti@rhyta.com
+' into text field '//*[@id="app-container"]/div/div[2]/form/div[2]/div/div/div/span/input'</msg>
+<status status="PASS" endtime="20170503 11:10:37.896" starttime="20170503 11:10:37.629"></status>
 </kw>
-<msg timestamp="20170502 09:04:51.649" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.650" level="FAIL">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</msg>
-<status status="FAIL" endtime="20170502 09:04:51.650" starttime="20170502 09:04:51.647"></status>
-</kw>
-<status status="FAIL" endtime="20170502 09:04:51.650" starttime="20170502 09:04:51.647"></status>
-</kw>
-<kw type="teardown" name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170502 09:04:51.650" starttime="20170502 09:04:51.650"></status>
-</kw>
-<tags>
-<tag>inv-tel</tag>
-</tags>
-<status status="FAIL" endtime="20170502 09:04:51.650" critical="yes" starttime="20170502 09:04:51.647">Setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</test>
-<test id="s1-s2-t5" name="Dont Create Account Invalid CPF">
-<kw type="setup" name="Open Browser To Page" library="keywords">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
-<arg>https://cliente.americanas.com.br/s/cadastro/pf/</arg>
-<arg>gc</arg>
-<arg>None</arg>
-<arg>http://192.168.3.113:4444/wd/hub</arg>
+<arg>${pass_locator}</arg>
+<arg>${apass}</arg>
 </arguments>
-<msg timestamp="20170502 09:04:51.651" level="INFO">Opening browser 'gc' to base url 'https://cliente.americanas.com.br/s/cadastro/pf/' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
-<msg timestamp="20170502 09:04:51.652" level="INFO">Could not get IP address for host: 192.168.3.113</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170502 09:04:51.653" level="FAIL">No browser is open</msg>
-<status status="FAIL" endtime="20170502 09:04:51.653" starttime="20170502 09:04:51.652"></status>
+<msg timestamp="20170503 11:10:37.897" level="INFO">Typing text 'P4$$w0rd' into text field '//*[@id="app-container"]/div/div[2]/form/div[3]/div[1]/div/div/div/span/input'</msg>
+<status status="PASS" endtime="20170503 11:10:38.093" starttime="20170503 11:10:37.897"></status>
 </kw>
-<msg timestamp="20170502 09:04:51.653" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.654" level="FAIL">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</msg>
-<status status="FAIL" endtime="20170502 09:04:51.654" starttime="20170502 09:04:51.651"></status>
-</kw>
-<status status="FAIL" endtime="20170502 09:04:51.654" starttime="20170502 09:04:51.651"></status>
-</kw>
-<kw type="teardown" name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170502 09:04:51.654" starttime="20170502 09:04:51.654"></status>
-</kw>
-<tags>
-<tag>inv-cpf</tag>
-</tags>
-<status status="FAIL" endtime="20170502 09:04:51.654" critical="yes" starttime="20170502 09:04:51.650">Setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</test>
-<test id="s1-s2-t6" name="Dont Create Account Invalid CEP">
-<kw type="setup" name="Open Browser To Page" library="keywords">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
-<arg>https://cliente.americanas.com.br/s/cadastro/pf/</arg>
-<arg>gc</arg>
-<arg>None</arg>
-<arg>http://192.168.3.113:4444/wd/hub</arg>
+<arg>${confirm_pass_locator}</arg>
+<arg>${aconfirmpass}</arg>
 </arguments>
-<msg timestamp="20170502 09:04:51.655" level="INFO">Opening browser 'gc' to base url 'https://cliente.americanas.com.br/s/cadastro/pf/' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
-<msg timestamp="20170502 09:04:51.655" level="INFO">Could not get IP address for host: 192.168.3.113</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170502 09:04:51.657" level="FAIL">No browser is open</msg>
-<status status="FAIL" endtime="20170502 09:04:51.657" starttime="20170502 09:04:51.656"></status>
+<msg timestamp="20170503 11:10:38.093" level="INFO">Typing text 'P4$$w0rd' into text field '//*[@id="app-container"]/div/div[2]/form/div[3]/div[2]/div/div/div/span/input'</msg>
+<status status="PASS" endtime="20170503 11:10:38.268" starttime="20170503 11:10:38.093"></status>
 </kw>
-<msg timestamp="20170502 09:04:51.657" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.657" level="FAIL">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</msg>
-<status status="FAIL" endtime="20170502 09:04:51.657" starttime="20170502 09:04:51.655"></status>
-</kw>
-<status status="FAIL" endtime="20170502 09:04:51.657" starttime="20170502 09:04:51.655"></status>
-</kw>
-<kw type="teardown" name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170502 09:04:51.658" starttime="20170502 09:04:51.658"></status>
-</kw>
-<tags>
-<tag>inv-cep</tag>
-</tags>
-<status status="FAIL" endtime="20170502 09:04:51.658" critical="yes" starttime="20170502 09:04:51.655">Setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</test>
-<test id="s1-s2-t7" name="Show Weak Pass">
-<kw type="setup" name="Open Browser To Page" library="keywords">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
-<arg>https://cliente.americanas.com.br/s/cadastro/pf/</arg>
-<arg>gc</arg>
-<arg>None</arg>
-<arg>http://192.168.3.113:4444/wd/hub</arg>
+<arg>${name_locator}</arg>
+<arg>${aname}</arg>
 </arguments>
-<msg timestamp="20170502 09:04:51.659" level="INFO">Opening browser 'gc' to base url 'https://cliente.americanas.com.br/s/cadastro/pf/' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
-<msg timestamp="20170502 09:04:51.659" level="INFO">Could not get IP address for host: 192.168.3.113</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170502 09:04:51.660" level="FAIL">No browser is open</msg>
-<status status="FAIL" endtime="20170502 09:04:51.660" starttime="20170502 09:04:51.659"></status>
+<msg timestamp="20170503 11:10:38.269" level="INFO">Typing text 'Luís Pinto Cavalcanti' into text field '//*[@id="app-container"]/div/div[2]/form/div[4]/div[1]/div/div/div/input'</msg>
+<status status="PASS" endtime="20170503 11:10:38.472" starttime="20170503 11:10:38.268"></status>
 </kw>
-<msg timestamp="20170502 09:04:51.660" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.660" level="FAIL">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</msg>
-<status status="FAIL" endtime="20170502 09:04:51.661" starttime="20170502 09:04:51.658"></status>
-</kw>
-<status status="FAIL" endtime="20170502 09:04:51.661" starttime="20170502 09:04:51.658"></status>
-</kw>
-<kw type="teardown" name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170502 09:04:51.661" starttime="20170502 09:04:51.661"></status>
-</kw>
-<tags>
-<tag>weak-pass</tag>
-</tags>
-<status status="FAIL" endtime="20170502 09:04:51.661" critical="yes" starttime="20170502 09:04:51.658">Setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</test>
-<test id="s1-s2-t8" name="Show Regular Pass">
-<kw type="setup" name="Open Browser To Page" library="keywords">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>https://cliente.americanas.com.br/s/cadastro/pf/</arg>
-<arg>gc</arg>
-<arg>None</arg>
-<arg>http://192.168.3.113:4444/wd/hub</arg>
+<arg>//*[@id="app-container"]/div/div[2]/form/div[4]/div[2]/div/div[1]</arg>
 </arguments>
-<msg timestamp="20170502 09:04:51.662" level="INFO">Opening browser 'gc' to base url 'https://cliente.americanas.com.br/s/cadastro/pf/' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
-<msg timestamp="20170502 09:04:51.662" level="INFO">Could not get IP address for host: 192.168.3.113</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170502 09:04:51.663" level="FAIL">No browser is open</msg>
-<status status="FAIL" endtime="20170502 09:04:51.664" starttime="20170502 09:04:51.663"></status>
+<msg timestamp="20170503 11:10:38.473" level="INFO">Clicking element '//*[@id="app-container"]/div/div[2]/form/div[4]/div[2]/div/div[1]'.</msg>
+<status status="PASS" endtime="20170503 11:10:38.557" starttime="20170503 11:10:38.473"></status>
 </kw>
-<msg timestamp="20170502 09:04:51.664" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.664" level="FAIL">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</msg>
-<status status="FAIL" endtime="20170502 09:04:51.664" starttime="20170502 09:04:51.662"></status>
-</kw>
-<status status="FAIL" endtime="20170502 09:04:51.664" starttime="20170502 09:04:51.662"></status>
-</kw>
-<kw type="teardown" name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170502 09:04:51.664" starttime="20170502 09:04:51.664"></status>
-</kw>
-<tags>
-<tag>reg-pass</tag>
-</tags>
-<status status="FAIL" endtime="20170502 09:04:51.664" critical="yes" starttime="20170502 09:04:51.661">Setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</test>
-<test id="s1-s2-t9" name="Show Strong Pass">
-<kw type="setup" name="Open Browser To Page" library="keywords">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
-<arg>https://cliente.americanas.com.br/s/cadastro/pf/</arg>
-<arg>gc</arg>
-<arg>None</arg>
-<arg>http://192.168.3.113:4444/wd/hub</arg>
+<arg>${cpf_locator}</arg>
+<arg>${acpf}</arg>
 </arguments>
-<msg timestamp="20170502 09:04:51.665" level="INFO">Opening browser 'gc' to base url 'https://cliente.americanas.com.br/s/cadastro/pf/' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
-<msg timestamp="20170502 09:04:51.666" level="INFO">Could not get IP address for host: 192.168.3.113</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170502 09:04:51.667" level="FAIL">No browser is open</msg>
-<status status="FAIL" endtime="20170502 09:04:51.667" starttime="20170502 09:04:51.666"></status>
+<msg timestamp="20170503 11:10:38.557" level="INFO">Typing text '581.261.561-63' into text field '//*[@id="app-container"]/div/div[2]/form/div[4]/div[3]/div/div/div/span/input'</msg>
+<status status="PASS" endtime="20170503 11:10:38.718" starttime="20170503 11:10:38.557"></status>
 </kw>
-<msg timestamp="20170502 09:04:51.667" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.668" level="FAIL">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</msg>
-<status status="FAIL" endtime="20170502 09:04:51.668" starttime="20170502 09:04:51.665"></status>
-</kw>
-<status status="FAIL" endtime="20170502 09:04:51.668" starttime="20170502 09:04:51.665"></status>
-</kw>
-<kw type="teardown" name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170502 09:04:51.668" starttime="20170502 09:04:51.668"></status>
-</kw>
-<tags>
-<tag>strong-pass</tag>
-</tags>
-<status status="FAIL" endtime="20170502 09:04:51.668" critical="yes" starttime="20170502 09:04:51.665">Setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</test>
-<status status="FAIL" endtime="20170502 09:04:51.669" starttime="20170502 09:04:51.632"></status>
-</suite>
-<suite source="/home/rfsilva/PycharmProjects/e-commerce-local/03__login.robot" id="s1-s3" name="Login">
-<test id="s1-s3-t1" name="Valid Login">
-<kw type="setup" name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
+<kw name="Click Element At Coordinates" library="Selenium2Library">
+<doc>Click element identified by `locator` at x/y coordinates of the element.</doc>
 <arguments>
-<arg>https://cliente.americanas.com.br/</arg>
-<arg>gc</arg>
-<arg>chrome</arg>
-<arg>http://192.168.3.113:4444/wd/hub</arg>
+<arg>${birth_locator}</arg>
+<arg>-75</arg>
+<arg>0</arg>
 </arguments>
-<msg timestamp="20170502 09:04:51.673" level="INFO">Opening browser 'gc' to base url 'https://cliente.americanas.com.br/' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
-<msg timestamp="20170502 09:04:51.673" level="INFO">Could not get IP address for host: 192.168.3.113</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170502 09:04:51.675" level="FAIL">No browser is open</msg>
-<status status="FAIL" endtime="20170502 09:04:51.675" starttime="20170502 09:04:51.674"></status>
+<msg timestamp="20170503 11:10:38.719" level="INFO">Click clicking element '//*[@id="app-container"]/div/div[2]/form/div[4]/div[4]/div/div/div/span/input' in coordinates '-75', '0'.</msg>
+<status status="PASS" endtime="20170503 11:10:38.783" starttime="20170503 11:10:38.719"></status>
 </kw>
-<msg timestamp="20170502 09:04:51.675" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.675" level="FAIL">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</msg>
-<status status="FAIL" endtime="20170502 09:04:51.675" starttime="20170502 09:04:51.673"></status>
-</kw>
-<kw type="teardown" name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170502 09:04:51.675" starttime="20170502 09:04:51.675"></status>
-</kw>
-<tags>
-<tag>valid_login</tag>
-</tags>
-<status status="FAIL" endtime="20170502 09:04:51.675" critical="yes" starttime="20170502 09:04:51.673">Setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</test>
-<test id="s1-s3-t2" name="Invalid Login Wrong Pass">
-<kw type="setup" name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
 <arguments>
-<arg>https://cliente.americanas.com.br/</arg>
-<arg>gc</arg>
-<arg>chrome</arg>
-<arg>http://192.168.3.113:4444/wd/hub</arg>
+<arg>${birth_locator}</arg>
+<arg>08081980</arg>
 </arguments>
-<msg timestamp="20170502 09:04:51.676" level="INFO">Opening browser 'gc' to base url 'https://cliente.americanas.com.br/' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
-<msg timestamp="20170502 09:04:51.676" level="INFO">Could not get IP address for host: 192.168.3.113</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170502 09:04:51.678" level="FAIL">No browser is open</msg>
-<status status="FAIL" endtime="20170502 09:04:51.678" starttime="20170502 09:04:51.677"></status>
+<status status="PASS" endtime="20170503 11:10:38.841" starttime="20170503 11:10:38.783"></status>
 </kw>
-<msg timestamp="20170502 09:04:51.678" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.678" level="FAIL">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</msg>
-<status status="FAIL" endtime="20170502 09:04:51.678" starttime="20170502 09:04:51.676"></status>
-</kw>
-<kw type="teardown" name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170502 09:04:51.678" starttime="20170502 09:04:51.678"></status>
-</kw>
-<tags>
-<tag>inv-log_pass</tag>
-</tags>
-<status status="FAIL" endtime="20170502 09:04:51.678" critical="yes" starttime="20170502 09:04:51.676">Setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</test>
-<test id="s1-s3-t3" name="Invalid Login Wrong Email">
-<kw type="setup" name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
-<arg>https://cliente.americanas.com.br/</arg>
-<arg>gc</arg>
-<arg>chrome</arg>
-<arg>http://192.168.3.113:4444/wd/hub</arg>
+<arg>${tel_locator}</arg>
+<arg>${atel}</arg>
 </arguments>
-<msg timestamp="20170502 09:04:51.679" level="INFO">Opening browser 'gc' to base url 'https://cliente.americanas.com.br/' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
-<msg timestamp="20170502 09:04:51.679" level="INFO">Could not get IP address for host: 192.168.3.113</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170502 09:04:51.680" level="FAIL">No browser is open</msg>
-<status status="FAIL" endtime="20170502 09:04:51.680" starttime="20170502 09:04:51.680"></status>
+<msg timestamp="20170503 11:10:38.841" level="INFO">Typing text '' into text field '//*[@id="app-container"]/div/div[2]/form/div[5]/div[1]/div/div/div/span/input'</msg>
+<status status="PASS" endtime="20170503 11:10:38.936" starttime="20170503 11:10:38.841"></status>
 </kw>
-<msg timestamp="20170502 09:04:51.681" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.681" level="FAIL">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</msg>
-<status status="FAIL" endtime="20170502 09:04:51.681" starttime="20170502 09:04:51.679"></status>
-</kw>
-<kw type="teardown" name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170502 09:04:51.681" starttime="20170502 09:04:51.681"></status>
-</kw>
-<tags>
-<tag>inv-log_email</tag>
-</tags>
-<status status="FAIL" endtime="20170502 09:04:51.681" critical="yes" starttime="20170502 09:04:51.679">Setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</test>
-<status status="FAIL" endtime="20170502 09:04:51.682" starttime="20170502 09:04:51.670"></status>
-</suite>
-<suite source="/home/rfsilva/PycharmProjects/e-commerce-local/04__purchase.robot" id="s1-s4" name="Purchase">
-<kw type="setup" name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
-<arg>https://cliente.americanas.com.br/s/</arg>
-<arg>gc</arg>
-<arg>chrome</arg>
-<arg>http://192.168.3.113:4444/wd/hub</arg>
+<arg>${cep_locator}</arg>
+<arg>${acep}</arg>
 </arguments>
-<msg timestamp="20170502 09:04:51.687" level="INFO">Opening browser 'gc' to base url 'https://cliente.americanas.com.br/s/' through remote server at 'http://192.168.3.113:4444/wd/hub'</msg>
-<msg timestamp="20170502 09:04:51.687" level="INFO">Could not get IP address for host: 192.168.3.113</msg>
+<msg timestamp="20170503 11:10:38.936" level="INFO">Typing text '98050-350' into text field '//*[@id="app-container"]/div/div[2]/form/div[8]/div[2]/div/div/div/span/input'</msg>
+<status status="PASS" endtime="20170503 11:10:39.075" starttime="20170503 11:10:38.936"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${number_locator}</arg>
+<arg>15</arg>
+</arguments>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170502 09:04:51.688" level="FAIL">No browser is open</msg>
-<status status="FAIL" endtime="20170502 09:04:51.688" starttime="20170502 09:04:51.688"></status>
+<status status="FAIL" endtime="20170503 11:10:39.795" starttime="20170503 11:10:39.790"></status>
 </kw>
-<msg timestamp="20170502 09:04:51.689" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.689" level="FAIL">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</msg>
-<status status="FAIL" endtime="20170502 09:04:51.689" starttime="20170502 09:04:51.687"></status>
+<msg timestamp="20170503 11:10:39.795" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<status status="FAIL" endtime="20170503 11:10:39.795" starttime="20170503 11:10:39.075"></status>
 </kw>
-<test id="s1-s4-t1" name="Login On Application">
-<status status="FAIL" endtime="20170502 09:04:51.689" critical="yes" starttime="20170502 09:04:51.689">Parent suite setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</test>
-<test id="s1-s4-t2" name="Add Item To Cart">
-<status status="FAIL" endtime="20170502 09:04:51.690" critical="yes" starttime="20170502 09:04:51.689">Parent suite setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</test>
-<test id="s1-s4-t3" name="Logout-Login Basket Should Contain 1 Item">
-<status status="FAIL" endtime="20170502 09:04:51.690" critical="yes" starttime="20170502 09:04:51.690">Parent suite setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</test>
-<test id="s1-s4-t4" name="Add Another Item To Cart">
-<status status="FAIL" endtime="20170502 09:04:51.691" critical="yes" starttime="20170502 09:04:51.690">Parent suite setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</test>
-<test id="s1-s4-t5" name="Basket Should Contain 2 Items">
-<status status="FAIL" endtime="20170502 09:04:51.691" critical="yes" starttime="20170502 09:04:51.691">Parent suite setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</test>
+<status status="FAIL" endtime="20170503 11:10:39.795" starttime="20170503 11:10:37.629"></status>
+</kw>
 <kw type="teardown" name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170502 09:04:51.692" starttime="20170502 09:04:51.691"></status>
-</kw>
-<status status="FAIL" endtime="20170502 09:04:51.692" starttime="20170502 09:04:51.682">Suite setup failed:
-URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
-</suite>
-<status status="FAIL" endtime="20170502 09:04:51.693" starttime="20170502 09:04:51.569"></status>
-</suite>
-<statistics>
-<total>
-<stat fail="18" pass="0">Critical Tests</stat>
-<stat fail="18" pass="0">All Tests</stat>
-</total>
-<tag>
-<stat fail="1" pass="0">diff-pass</stat>
-<stat fail="1" pass="0">get_fake_data</stat>
-<stat fail="1" pass="0">inv-cep</stat>
-<stat fail="1" pass="0">inv-cpf</stat>
-<stat fail="1" pass="0">inv-log_email</stat>
-<stat fail="1" pass="0">inv-log_pass</stat>
-<stat fail="1" pass="0">inv-tel</stat>
-<stat fail="1" pass="0">missing-fields</stat>
-<stat fail="1" pass="0">reg-pass</stat>
-<stat fail="1" pass="0">strong-pass</stat>
-<stat fail="1" pass="0">valid_ac</stat>
-<stat fail="1" pass="0">valid_login</stat>
-<stat fail="1" pass="0">weak-pass</stat>
-</tag>
-<suite>
-<stat fail="18" id="s1" name="E-Commerce-Local" pass="0">E-Commerce-Local</stat>
-<stat fail="1" id="s1-s1" name="Fakedata" pass="0">E-Commerce-Local.Fakedata</stat>
-<stat fail="9" id="s1-s2" name="Create Account" pass="0">E-Commerce-Local.Create Account</stat>
-<stat fail="3" id="s1-s3" name="Login" pass="0">E-Commerce-Local.Login</stat>
-<stat fail="5" id="s1-s4" name="Purchase" pass="0">E-Commerce-Local.Purchase</stat>
-</suite>
-</statistics>
 <errors>
-<msg timestamp="20170502 09:04:51.630" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.639" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.643" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.646" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.649" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.653" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.657" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.660" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.664" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.667" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.675" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.678" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.681" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20170502 09:04:51.689" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170503 11:10:39.795" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<msg timestamp="20170503 11:10:39.817" level="ERROR">Execution stopped by user.</msg>
 </errors>
 </robot>
