@@ -43,4 +43,3 @@ Get Fake Data
     ${element}=    Get Text   ${locator}
     ${filtered_element}=    Remove String   ${element}  This is a real email address. Click here to activate it!
     [Return]    ${filtered_element}
-
